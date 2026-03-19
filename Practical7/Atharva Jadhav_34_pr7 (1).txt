@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "kernelspec": {
+      "name": "xpython",
+      "display_name": "Python 3.13 (XPython)",
+      "language": "python"
+    },
+    "language_info": {
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "version": "3.13.1"
+    }
+  },
+  "nbformat_minor": 5,
+  "nbformat": 4,
+  "cells": [
+    {
+      "id": "9b331835-1d36-4435-90e3-f106e49fdff2",
+      "cell_type": "code",
+      "source": "bankAccounts = {}\n\n# Number of accounts\nn = int(input(\"Enter number of accounts to create: \"))\n\n# Create accounts\nfor i in range(n):\n    accNo = input(\"Enter Account Number: \")\n    balance = float(input(\"Enter Account Balance: \"))\n    bankAccounts[accNo] = balance\n\n# Display all accounts and calculate total\ntotal = 0\nprint(\"\\nAll Account Details:\")\nfor accNo in bankAccounts:\n    print(\"Account:\", accNo, \"Balance:\", bankAccounts[accNo])\n    total += bankAccounts[accNo]\n\n# Average balance\naverage = total / len(bankAccounts)\nprint(\"\\nTotal Balance:\", total)\nprint(\"Average Balance:\", average)\n\n# Highest and lowest balance\nhighest = max(bankAccounts.values())\nlowest = min(bankAccounts.values())\n\nprint(\"Highest Balance:\", highest)\nprint(\"Lowest Balance:\", lowest)\n\n# High value accounts\nlimit = float(input(\"\\nEnter high-value balance limit: \"))\nprint(\"High Value Accounts:\")\nfor accNo in bankAccounts:\n    if bankAccounts[accNo] > limit:\n        print(accNo, bankAccounts[accNo])\n\n# Search account\nsearchAcc = input(\"\\nEnter account number to search: \")\nif searchAcc in bankAccounts:\n    print(\"Account exists with balance:\", bankAccounts[searchAcc])\nelse:\n    print(\"Account not found\")\n\n# Transaction\naccNo = input(\"\\nEnter account number for transaction: \")\nif accNo in bankAccounts:\n    amount = float(input(\"Enter amount (+deposit / -withdraw): \"))\n    bankAccounts[accNo] += amount\n    print(\"Updated Balance:\", bankAccounts[accNo])\nelse:\n    print(\"Account not found\")\n\n# Close account\naccNo = input(\"\\nEnter account number to close: \")\nif accNo in bankAccounts:\n    del bankAccounts[accNo]\n    print(\"Account removed\")\nelse:\n    print(\"Account not found\")\n\n# Display account numbers\nprint(\"\\nAccount Numbers:\")\nfor accNo in bankAccounts:\n    print(accNo)\n\n# Display balances\nprint(\"\\nBalances:\")\nfor accNo in bankAccounts:\n    print(bankAccounts[accNo])\n\n# Sorted accounts\nprint(\"\\nAccounts Sorted by Account Number:\")\nfor accNo in sorted(bankAccounts.keys()):\n    print(accNo, bankAccounts[accNo])\n",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "Enter number of accounts to create:  8\nEnter Account Number:  4565123789456\nEnter Account Balance:  1500\nEnter Account Number:  3541023654566\nEnter Account Balance:  7008\nEnter Account Number:  0\nEnter Account Balance:  12\nEnter Account Number:  78542031694\nEnter Account Balance:  1230456\n"
+        }
+      ],
+      "execution_count": null
+    },
+    {
+      "id": "48208767-6ac3-42e7-b5a6-acb6ed7a8bc1",
+      "cell_type": "code",
+      "source": "",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    }
+  ]
+}
