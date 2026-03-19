@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python (Pyodide)",
+      "language": "python",
+      "name": "python"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "python",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8"
+    }
+  },
+  "nbformat_minor": 5,
+  "nbformat": 4,
+  "cells": [
+    {
+      "id": "eb283448-c84b-4c24-917b-d9a6e8e52588",
+      "cell_type": "code",
+      "source": "\n \n\n# Input values \n\nbase = float(input(\"Enter base number: \")) \n\nexponent = float(input(\"Enter exponent: \")) \n\nnumber = float(input(\"Enter a number: \")) \n\nfact_number = int(input(\"Enter a number for factorial: \")) \n\n \n\n# Power \n\npower_result = math.pow(base, exponent) \n\n \n\n# Ceiling \n\nceiling_result = math.ceil(number) \n\n \n\n# Square Root \n\nsqrt_result = math.sqrt(number) \n\n \n\n# Factorial \n\nfactorial_result = math.factorial(fact_number) \n\n \n\n# Output \n\nprint(\"Power:\", power_result) \n\nprint(\"Ceiling:\", ceiling_result) \n\nprint(\"Square Root:\", sqrt_result) \n\nprint(\"Factorial:\", factorial_result) \n\n",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "Enter base number:  1\nEnter exponent:  2\nEnter a number:  2\nEnter a number for factorial:  2\n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "Power: 1.0\nCeiling: 2\nSquare Root: 1.4142135623730951\nFactorial: 2\n"
+        }
+      ],
+      "execution_count": 15
+    },
+    {
+      "id": "a19b1322-95d5-421d-829c-79f1ba858398",
+      "cell_type": "code",
+      "source": "# String Built-in Functions \n\n# ----------------------------- \n\ns1 = input(\"\\nEnter a string: \") \n\ns2 = input(\"Enter another string: \") \n\n \n\nprint(\"Uppercase:\", s1.upper()) \n\nprint(\"Lowercase:\", s1.lower()) \n\nprint(\"Replaced string:\", s1.replace(\"Python\", \"Java\")) \n\nprint(\"Position of 'is':\", s1.find(\"is\")) \n\nprint(\"Concatenated string:\", s1 + \" \" + s2) ",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "\nEnter a string:  sahil\nEnter another string:  jadhav\n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "Uppercase: SAHIL\nLowercase: sahil\nReplaced string: sahil\nPosition of 'is': -1\nConcatenated string: sahil jadhav\n"
+        }
+      ],
+      "execution_count": 16
+    },
+    {
+      "id": "efddb98f-2c5b-4e8d-a7c5-11bef06f4ada",
+      "cell_type": "code",
+      "source": "# Half Adder Function \n\n# ----------------------------- \n\ndef half_adder(a, b): \n\n    sum = a ^ b \n\n    carry = a & b \n\n    return sum, carry \n\n \n\n# ----------------------------- \n\n# Full Adder Function \n\n# ----------------------------- \n\ndef full_adder(a, b, cin): \n\n    sum = a ^ b ^ cin \n\n    carry = (a & b) | (b & cin) | (a & cin) \n\n    return sum, carry \n\n \n\n# Half Adder Output \n\nx = int(input(\"\\nEnter first bit for Half Adder: \")) \n\ny = int(input(\"Enter second bit for Half Adder: \")) \n\ns, c = half_adder(x, y) \n\nprint(\"Half Adder Sum:\", s, \"Carry:\", c) \n\n \n\n# Full Adder Output \n\nx = int(input(\"\\nEnter first bit for Full Adder: \")) \n\ny = int(input(\"Enter second bit for Full Adder: \")) \n\ncin = int(input(\"Enter carry-in: \")) \n\ns, c = full_adder(x, y, cin) \n\nprint(\"Full Adder Sum:\", s, \"Carry:\", c) ",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "\nEnter first bit for Half Adder:  1\nEnter second bit for Half Adder:  0\n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "Half Adder Sum: 1 Carry: 0\n"
+        },
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "\nEnter first bit for Full Adder:  1\nEnter second bit for Full Adder:  0\nEnter carry-in:  1\n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "Full Adder Sum: 0 Carry: 1\n"
+        }
+      ],
+      "execution_count": 17
+    },
+    {
+      "id": "d4a42d8e-1240-48d9-90f6-adf117b895d5",
+      "cell_type": "code",
+      "source": "# ----------------------------- \n\n# find() Function Example \n\n# ----------------------------- \n\ntext = \"Python is a powerful language\" \n\nindex = text.find(\"language\") \n\nprint(\"\\nIndex of word 'language':\", index) ",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "\nIndex of word 'language': 21\n"
+        }
+      ],
+      "execution_count": 18
+    },
+    {
+      "id": "5ffeafdb-8a53-49d4-ba25-4d4be4fdf954",
+      "cell_type": "code",
+      "source": "",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    }
+  ]
+}
