@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "kernelspec": {
+      "name": "python",
+      "display_name": "Python (Pyodide)",
+      "language": "python"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "python",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8"
+    }
+  },
+  "nbformat_minor": 5,
+  "nbformat": 4,
+  "cells": [
+    {
+      "id": "bcd9d265-5d39-485c-b1d0-838def6e6cd3",
+      "cell_type": "code",
+      "source": "import math \n\n  \n\n# Input peak voltage \n\nVm = float(input(\"Enter the peak value of voltage Vm: \")) \n\n  \n\n# Calculate DC output voltage \n\nVdc = Vm / math.pi \n\n  \n\n# Display result \n\nprint(\"DC output voltage (Vdc) =\", Vdc) ",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "Enter the peak value of voltage Vm:  12\n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "DC output voltage (Vdc) = 3.819718634205488\n"
+        }
+      ],
+      "execution_count": 1
+    },
+    {
+      "id": "6efeb4ab-8223-485a-a9b6-1636ba0fe0e5",
+      "cell_type": "code",
+      "source": "import statistics \n\n  \n\n# Input list of numbers \n\ndata = [10, 20, 20, 30, 40] \n\n  \n\n# Calculations \n\nmean_value = statistics.mean(data) \n\nmedian_value = statistics.median(data) \n\nmode_value = statistics.mode(data) \n\nstd_deviation = statistics.stdev(data) \n\n  \n\n# Display results \n\nprint(\"Mean =\", mean_value) \n\nprint(\"Median =\", median_value) \n\nprint(\"Mode =\", mode_value) \n\nprint(\"Standard Deviation =\", std_deviation) ",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "Mean = 24\nMedian = 20\nMode = 20\nStandard Deviation = 11.40175425099138\n"
+        }
+      ],
+      "execution_count": 2
+    },
+    {
+      "id": "f9ce0f16-d70c-4012-8046-d3434c50e01c",
+      "cell_type": "code",
+      "source": "def add(a, b):\n    return a + b\n\ndef subtract(a, b):\n    return a - b\n\ndef multiply(a, b):\n    return a * b\n\ndef divide(a, b):\n    if b == 0:\n        return \"Cannot divide by zero\"\n    return a / b\n\n\na = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\n\nprint(\"Addition =\", add(a, b))\nprint(\"Subtraction =\", subtract(a, b))\nprint(\"Multiplication =\", multiply(a, b))\nprint(\"Division =\", divide(a, b))\n",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "Enter first number:  20\nEnter second number:  12\n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "Addition = 32\nSubtraction = 8\nMultiplication = 240\nDivision = 1.6666666666666667\n"
+        }
+      ],
+      "execution_count": 4
+    },
+    {
+      "id": "c037592a-1000-496d-8ac1-b08679afe4e2",
+      "cell_type": "code",
+      "source": "",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    },
+    {
+      "id": "2dd7182c-a654-48d3-8ee6-467d68b0c303",
+      "cell_type": "code",
+      "source": "",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    }
+  ]
+}
