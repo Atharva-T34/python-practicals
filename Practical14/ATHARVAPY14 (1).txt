@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "kernelspec": {
+      "name": "python",
+      "display_name": "Python (Pyodide)",
+      "language": "python"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "python",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8"
+    }
+  },
+  "nbformat_minor": 5,
+  "nbformat": 4,
+  "cells": [
+    {
+      "id": "06031319-6fad-4a22-9015-99e72c247c27",
+      "cell_type": "code",
+      "source": "stack = []\n\n# Push\nstack.append(10)\nstack.append(20)\nstack.append(30)\n\nprint(\"Stack after Push:\", stack)\n\n# Pop\nstack.pop()\n\nprint(\"Stack after Pop:\", stack)\n",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "Stack after Push: [10, 20, 30]\nStack after Pop: [10, 20]\n"
+        }
+      ],
+      "execution_count": 3
+    },
+    {
+      "id": "c634ea0c-5635-47f6-bc6c-8382d370f1bb",
+      "cell_type": "code",
+      "source": "queue = []\n\n# Enqueue (Insert)\nqueue.append(10)\nqueue.append(20)\nqueue.append(30)\n\nprint(\"Queue after Insert:\", queue)\n\n# Dequeue (Delete)\nqueue.pop(0)\n\nprint(\"Queue after Delete:\", queue)\n",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "Queue after Insert: [10, 20, 30]\nQueue after Delete: [20, 30]\n"
+        }
+      ],
+      "execution_count": 4
+    },
+    {
+      "id": "210f8193-0e87-4c06-9c8b-dc29036de2f3",
+      "cell_type": "code",
+      "source": "data = []\n\n# Stack Operation\ndata.append(1)\ndata.append(2)\ndata.pop()\nprint(\"Stack Mode:\", data)\n\n# Queue Operation\ndata.append(3)\ndata.pop(0)\nprint(\"Queue Mode:\", data)\n",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "Stack Mode: [1]\nQueue Mode: [3]\n"
+        }
+      ],
+      "execution_count": 6
+    },
+    {
+      "id": "ee1fda24-6d5a-4cc9-89ef-8e8f6379c422",
+      "cell_type": "code",
+      "source": "",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    }
+  ]
+}
